@@ -1,0 +1,147 @@
+.menu {
+ width: 19rem;
+ position: fixed;
+ display: flex;
+ flex-direction: column;
+ top: 60%;
+ transform: translateY(-60%);
+ left: 15vw;
+ /*change left from 10vw left side*/
+}
+
+.item {
+ height: 3.7rem;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ cursor: pointer;
+}
+/*font size for left button*/
+.title {
+ font-size: 2rem;
+ padding-right: 2.5rem;
+}
+
+.item.active .title {
+ font-size: 1.5rem;
+}
+/*text under button move text to right and display*/
+.sub-container {
+ width: 25rem;
+ position: fixed;
+ display: flex;
+ flex-direction: column;
+ top: 32%;
+ right: 15vw;
+ cursor: pointer;
+}
+
+.active-subheading {
+ cursor: default;
+ /*stop cursor from clicking info instead of button */
+}
+/*personal button*/
+.item.active:nth-child(1) {
+ background: linear-gradient(90deg, var(--transparent), var(--purple) 70%);
+ border-radius: var(--radius-right); 
+}
+/*education button*/
+.item.active:nth-child(2) {
+ background: linear-gradient(90deg, var(--transparent), var(--blue) 70%);
+ border-radius: var(--radius-right); 
+}
+/*career button*/
+.item.active:nth-child(3) {
+ background: linear-gradient(90deg, var(--transparent), var(--cyan) 70%);
+ border-radius: var(--radius-right); 
+}
+/*button info on the left*/
+
+.sub-container-1.active-subheading h3,
+.sub-container-2.active-subheading h3,
+.sub-container-3.active-subheading h3 {
+  border-radius: var(--radius-left);
+}
+
+.sub-container-1.active-subheading h3 {
+  background: linear-gradient(180deg, var(--purple), var(--transparent)100%);
+}
+
+.sub-container-2.active-subheading h3 {
+  background: linear-gradient(180deg, var(--blue), var(--transparent) 100%);
+}
+.sub-container-3.active-subheading h3 {
+  background: linear-gradient(180deg, var(--cyan), var(--transparent) 100%);
+}
+/*orginal 90deg*/
+.item.active {
+ position: relative;
+ cursor: default;
+}
+/*used default instead of none and added font-size*/
+.p-container {
+display: default;
+font-size: 1.2rem;
+}
+/*changed font size*/
+.active-subheading {
+ display: block;
+ font-size: 1.5rem;
+}
+
+.icon-title-container {
+ display: flex;
+ gap: 1.2rem;
+ margin-bottom: 0.5rem;
+ cursor: default;
+}
+
+.icon {
+ width: 3rem;
+ height: 3rem;
+}
+
+.sub-container-1 h3
+.sub-container-2 h3
+.sub-container-3 h3 {
+ position: relative;
+ margin: 0.2rem 0;
+ padding: 0.5rem 0 0.5rem 1rem;
+}
+@media (max-width: 1100px) {
+ .sub-container {
+ right: 1rem;
+ }
+ .item.active .title {
+  font-size: 1rem;
+ }
+ .item {
+  height: 2rem;
+ }
+}
+@media (max-width: 700px) {
+ .sub-container {
+ width: 15rem;
+ top: 50%;
+ left: 50%;
+ transform: translateX(-50%);
+ }
+ .title {
+  font-size: 1rem;
+  padding: 2.5rem;
+ }
+ .active-subheading .p-container {
+  font-size: 1rem;
+ }
+ h1 {
+  font-size: 1rem;
+ }
+ h2,
+ h3,
+ p {
+  font-size: 1rem;
+ }
+ .icon {
+  display: none;
+ }
+}

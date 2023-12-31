@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/*font family for the page*/
+body {
+ font-family: "Russo One", sans-serif;
+ color: white;
+ -webkit-tap-highlight-color: transparent;
+ /*background-color: #333;*/
+}
+/*Color for the icon and radius of the button color effect*/
+:root {
+ --purple: #540351;
+ --blue: #3627b1;
+ --cyan: #25afce;
+ --transparent: #00000000;
+ --radius-left: 3rem 0 0 3rem;
+ --radius-right: 0 3rem 3rem 0;
+}
+
+/*button hover setting*/
+botton:hover,
+/*creates white background effect with hovering on the button*/
+.class-sub-container a:hover,
+.project-item:hover,
+.skill-item:hover,
+.item:not(.active):hover,
+.sub-container-2:not(.active-subheading):hover,
+/*color and trasperacing of the button color from left to right 90def and 50%*/
+.sub-container-3:not(.active-subheading):hoverP_{
+ background-image: linear-gradient(90deg,#ffffff00, #ffffff42 50%, #ffffff00);
+}

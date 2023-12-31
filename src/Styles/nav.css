@@ -1,0 +1,79 @@
+/*body of the back of the page*/
+/*postion fixed in the document to allow us to move around the pg and the element 
+dont move. And flex the icon aline next to each other*/
+.nav {
+ position:fixed;
+ display: flex;
+ align-items: flex-start;
+ top: 3rem;
+ gap: 1.5625rem;
+ left: 50%
+}
+
+/*center in the middle of the pg the icon
+and move them back forth use inspect to see more*/
+.nav-about{
+ transform: translateX(-1.56rem);
+ 
+}
+.nav-skills{
+ transform: translateX(-6.25rem);
+}
+.nav-projects{
+ transform: translateX(-10.94rem);
+}
+.nav-contact{
+ transform: translateX(-15.62rem);
+}
+
+/*align the link with the title when moving*/
+
+a {
+ width: 3.125rem;
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 0.625rem;
+}
+/* the icon name display on top*/
+.page-title {
+ font-size: 1.5rem;
+ color: white;
+ cursor: default;/*title wont show link*/
+}
+
+.nav-link{
+ opacity: 0.7;
+}
+
+.nav-link:hover{
+ opacity: 1;
+}
+
+.nav-link.current{
+ opacity: 1;
+}
+/*section for mobile phone*/
+@media (max-width: 1100px){
+ .nav-about,
+ .nav-skills
+ .nav-projects,
+ .nav-contact {
+  transform: translateX(0);
+ }
+ /*will help pg icon recenter if page size changes, like for mobile phone*/
+ .nav{
+  top:calc(100vh - 8rem);
+  transform: translatex(-50%);
+ }
+ .nav-link{
+  width: 2rem;  
+ }
+ .nav-link img{
+  width: 2rem;
+ }
+ .page-title{
+  display: none;
+ }
+}
