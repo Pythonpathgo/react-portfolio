@@ -1,7 +1,7 @@
 /*playerStates ex.Loren/level styling*/ 
 
 #playerStats {
- width: 30rem; /*original 15rem*/
+ width: 15rem; /*original 15rem*/
  height: 5rem; /*original 4rem*/
  position: fixed;
  display: flex;
